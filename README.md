@@ -1,2 +1,9 @@
 # reference-platform-vmware
-Reference implementation using current vSphere plugin far vaquero_io
+
+Reference implementation of the vSphere provider for vaquero_io.
+
+### versions
+
+compatible with vaquier_io version(s):
+
+~> 1.0.0
