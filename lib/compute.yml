@@ -1,0 +1,21 @@
+compute:
+
+  default: &default
+    cpu: 1
+    ram: 1024
+    image: 'org-app-rev00002'
+    disk:
+      mount: 'opt'
+      capacity: 8192
+
+  tiny:
+    <<: *default
+
+  medium:
+    <<: *default
+    ram: 2048
+
+  large:
+    <<: *default
+    cpu: 2
+    ram: 12288

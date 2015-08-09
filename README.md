@@ -6,4 +6,4 @@ Reference implementation of the vSphere provider for vaquero_io.
 
 compatible with vaquier_io version(s):
 
-~> 1.0.0
+~> 2.0.0

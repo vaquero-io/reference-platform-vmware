@@ -1,0 +1,36 @@
+vcenter:
+
+  defaultnonprod: &defaultnonprod
+    geo: west
+    timezone: 085
+    host: 'vcwest.domain.com'
+    datacenter: 'pdc nonprod'
+    imagefolder: 'org/app/templates'
+    destfolder:
+    resourcepool: 'org-app-nonprod'
+    datastore: 'org-nonprod'
+    domain: dev.domain.com
+    dnsips:
+      - 10.1.1.15
+      - 10.1.1.16
+
+  defaultprod: &defaultprod
+    <<: *defaultnonprod
+    datacenter: 'pdc prod'
+    resourcepool: 'org-app-prod'
+    datastore: 'org-prod'
+    dnsips:
+      - 10.20.1.15
+      - 10.20.1.16
+
+  int:
+    <<: *defaultnonprod
+    destfolder: 'org/app/environments/int'
+
+  qa:
+      <<: *defaultnonprod
+      destfolder: 'org/app/environments/qa'
+
+  prod:
+      <<: *defaultprod
+      destfolder: 'org/app/environments/prod'

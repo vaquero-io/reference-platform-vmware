@@ -1,0 +1,41 @@
+platform:
+  product: App
+  provider: vaquero_io-knife-vsphere
+  plugin_version: 2.0.0
+
+  environments:
+    - int
+    - qa
+    - prod
+
+  nodename:
+    - environment
+    - component
+    - instance
+
+  require:
+    - vcenter
+    - network
+    - compute
+
+  profiles:
+
+    defaultprofile: &defaultprofile
+      vcenter:
+      network: dev
+      compute: tiny
+      count: 2
+      cmserver: chef.domain.com
+      cmrunlist:
+        - org-base
+        - app-#
+      addresses:
+        -
+
+  roles:
+
+    api:
+      <<: *defaultprofile
+
+    cui:
+      <<: *defaultprofile

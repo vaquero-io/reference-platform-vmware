@@ -1,0 +1,20 @@
+int:
+
+  profiles:
+
+    int: &int
+      vcenter: int
+
+  roles:
+
+    api:
+      <<: *int
+      addresses:
+        - 10.1.1.10
+        - 10.1.1.11
+
+    cui:
+      <<: *int
+      addresses:
+        - 10.1.2.10
+        - 10.1.2.11

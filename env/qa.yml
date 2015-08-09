@@ -1,0 +1,20 @@
+qa:
+
+  profiles:
+
+    qa: &qa
+      vcenter: qa
+
+  roles:
+
+    api:
+      <<: *qa
+      addresses:
+        - 10.2.1.10
+        - 10.2.1.11
+
+    cui:
+      <<: *qa
+      addresses:
+        - 10.2.2.10
+        - 10.2.2.11

@@ -1,0 +1,11 @@
+network:
+
+  dev:
+    vlanid: DEV_WEB_NET
+    gateway: 10.1.128.1
+    netmask: 19
+
+  prod:
+      vlanid: PROD_WEB_NET
+      gateway: 10.20.128.1
+      netmask: 19
