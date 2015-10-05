@@ -11,7 +11,6 @@ platform:
   nodename:
     - environment
     - component
-    - instance
 
   require:
     - vcenter
@@ -21,7 +20,7 @@ platform:
   profiles:
 
     defaultprofile: &defaultprofile
-      vcenter:
+      vcenter: int
       network: dev
       compute: tiny
       count: 2
